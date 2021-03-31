@@ -87,7 +87,7 @@ func (c *KafkaConnectionResolver) validateConnection(correlationId string, conne
 		return cerr.NewConfigError(correlationId, "NO_HOST", "Connection host is not set")
 	}
 
-	port := connection.PortWithDefault(4222)
+	port := connection.PortWithDefault(9092)
 	if port == 0 {
 		return cerr.NewConfigError(correlationId, "NO_PORT", "Connection port is not set")
 	}

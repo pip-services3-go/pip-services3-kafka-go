@@ -210,6 +210,13 @@ func (c *KafkaConnection) Close(correlationId string) error {
 	c.connection.Close()
 	c.Logger.Debug(correlationId, "Disconnected to Kafka broker")
 
+	// Close all consumers
+	for _, subscription := range c.subscriptions {
+		if subscription.Handler != nil {
+			(*subscription.Handler).Close()
+		}
+	}
+
 	c.connection = nil
 	c.subscriptions = []*KafkaSubscription{}
 

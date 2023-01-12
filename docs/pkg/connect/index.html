@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>connect - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.16.15";</script>
+<script src="../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="../index.html">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="../index.html">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package connect
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "connect"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#IKafkaMessageListener">type IKafkaMessageListener</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KafkaConnection">type KafkaConnection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKafkaConnection">func NewKafkaConnection() *KafkaConnection</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Close">func (c *KafkaConnection) Close(correlationId string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Configure">func (c *KafkaConnection) Configure(config *cconf.ConfigParams)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.CreateQueue">func (c *KafkaConnection) CreateQueue() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.DeleteQueue">func (c *KafkaConnection) DeleteQueue() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.GetConnection">func (c *KafkaConnection) GetConnection() kafka.SyncProducer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.IsOpen">func (c *KafkaConnection) IsOpen() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Open">func (c *KafkaConnection) Open(correlationId string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Publish">func (c *KafkaConnection) Publish(topic string, messages []*kafka.ProducerMessage, config *kafka.Config) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.ReadQueueNames">func (c *KafkaConnection) ReadQueueNames() ([]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.SetReferences">func (c *KafkaConnection) SetReferences(references cref.IReferences)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Subscribe">func (c *KafkaConnection) Subscribe(topic string, groupId string, config *kafka.Config, listener IKafkaMessageListener) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnection.Unsubscribe">func (c *KafkaConnection) Unsubscribe(topic string, groupId string, listener IKafkaMessageListener) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#KafkaConnectionResolver">type KafkaConnectionResolver</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewKafkaConnectionResolver">func NewKafkaConnectionResolver() *KafkaConnectionResolver</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnectionResolver.Compose">func (c *KafkaConnectionResolver) Compose(correlationId string, connections []*ccon.ConnectionParams, credential *cauth.CredentialParams) (*cconf.ConfigParams, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnectionResolver.Configure">func (c *KafkaConnectionResolver) Configure(config *cconf.ConfigParams)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnectionResolver.Resolve">func (c *KafkaConnectionResolver) Resolve(correlationId string) (*cconf.ConfigParams, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#KafkaConnectionResolver.SetReferences">func (c *KafkaConnectionResolver) SetReferences(references cref.IReferences)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#KafkaMessage">type KafkaMessage</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KafkaSubscription">type KafkaSubscription</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/connect/IKafkaMessageListener.go">IKafkaMessageListener.go</a>
+			
+				<a href="http://localhost:6060/src/connect/KafkaConnection.go">KafkaConnection.go</a>
+			
+				<a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go">KafkaConnectionResolver.go</a>
+			
+				<a href="http://localhost:6060/src/connect/KafkaMessage.go">KafkaMessage.go</a>
+			
+				<a href="http://localhost:6060/src/connect/KafkaSubscription.go">KafkaSubscription.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="IKafkaMessageListener">type <a href="http://localhost:6060/src/connect/IKafkaMessageListener.go?s=70:140#L1">IKafkaMessageListener</a>
+				<a class="permalink" href="index.html#IKafkaMessageListener">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type IKafkaMessageListener interface {
+    <a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#ConsumerGroupHandler">ConsumerGroupHandler</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="KafkaConnection">type <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=1953:2530#L34">KafkaConnection</a>
+				<a class="permalink" href="index.html#KafkaConnection">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+*
+</p>
+<pre>Kafka connection using plain driver.
+By defining a connection and sharing it through multiple message queues
+you can reduce number of used connections.
+
+### Configuration parameters ###
+</pre>
+<p>
+- client_id:               (optional) name of the client id
+- connection(s):
+</p>
+<pre>- discovery_key:             (optional) a key to retrieve the connection from IDiscovery
+- host:                      host name or IP address
+- port:                      port number (default: 27017)
+- uri:                       resource URI or connection string with all parameters in it
+</pre>
+<p>
+- credential(s):
+</p>
+<pre>- store_key:                 (optional) a key to retrieve the credentials from ICredentialStore
+- username:                  user name
+- password:                  user password
+</pre>
+<p>
+- options:
+</p>
+<pre>- log_level:            (optional) log level 0 - None, 1 - Error, 2 - Warn, 3 - Info, 4 - Debug (default: 1)
+- connect_timeout:      (optional) number of milliseconds to connect to broker (default: 1000)
+- max_retries:          (optional) maximum retry attempts (default: 5)
+- retry_timeout:        (optional) number of milliseconds to wait on each reconnection attempt (default: 30000)
+- request_timeout:      (optional) number of milliseconds to wait on flushing messages (default: 30000)
+</pre>
+<p>
+### References ###
+</p>
+<pre>- \*:logger:\*:\*:1.0           (optional) ILogger components to pass log messages
+- \*:discovery:\*:\*:1.0        (optional) IDiscovery services
+- \*:credential-store:\*:\*:1.0 (optional) Credential stores to resolve credentials
+</pre>
+
+			<pre>type KafkaConnection struct {
+
+    <span class="comment">// The logger.</span>
+<span id="KafkaConnection.Logger"></span>    Logger *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/log/">clog</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/log/#CompositeLogger">CompositeLogger</a>
+    <span class="comment">// The connection resolver.</span>
+<span id="KafkaConnection.ConnectionResolver"></span>    ConnectionResolver *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a>
+    <span class="comment">// The configuration options.</span>
+<span id="KafkaConnection.Options"></span>    Options *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/#ConfigParams">ConfigParams</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKafkaConnection">func <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=2609:2651#L61">NewKafkaConnection</a>
+					<a class="permalink" href="index.html#NewKafkaConnection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKafkaConnection() *<a href="index.html#KafkaConnection">KafkaConnection</a></pre>
+				<p>
+NewKafkaConnection creates a new instance of the connection component.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="KafkaConnection.Close">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=6660:6719#L188">Close</a>
+					<a class="permalink" href="index.html#KafkaConnection.Close">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Close(correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Closes component and frees used resources.
+</p>
+<pre>- correlationId 	(optional) transaction id to trace execution through call chain.
+</pre>
+<p>
+Return			 error or nil no errors occured
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.Configure">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=3427:3490#L92">Configure</a>
+					<a class="permalink" href="index.html#KafkaConnection.Configure">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Configure(config *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/#ConfigParams">ConfigParams</a>)</pre>
+				<p>
+Configures component by passing configuration parameters.
+</p>
+<pre>- config    configuration parameters to be set.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.CreateQueue">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=7968:8013#L251">CreateQueue</a>
+					<a class="permalink" href="index.html#KafkaConnection.CreateQueue">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) CreateQueue() <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.DeleteQueue">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=8035:8080#L255">DeleteQueue</a>
+					<a class="permalink" href="index.html#KafkaConnection.DeleteQueue">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) DeleteQueue() <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.GetConnection">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=7226:7286#L216">GetConnection</a>
+					<a class="permalink" href="index.html#KafkaConnection.GetConnection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) GetConnection() <a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#SyncProducer">SyncProducer</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.IsOpen">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=4560:4599#L115">IsOpen</a>
+					<a class="permalink" href="index.html#KafkaConnection.IsOpen">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) IsOpen() <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Checks if the component is opened.
+Returns true if the component has been opened and false otherwise.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.Open">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=6001:6059#L165">Open</a>
+					<a class="permalink" href="index.html#KafkaConnection.Open">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Open(correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Opens the component.
+</p>
+<pre>- correlationId 	(optional) transaction id to trace execution through call chain.
+- Return 			error or nil no errors occured.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.Publish">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=8537:8647#L278">Publish</a>
+					<a class="permalink" href="index.html#KafkaConnection.Publish">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Publish(topic <a href="http://localhost:6060/pkg/builtin/#string">string</a>, messages []*<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#ProducerMessage">ProducerMessage</a>, config *<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#Config">Config</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Publish a message to a specified topic
+</p>
+<p>
+Parameters:
+</p>
+<pre>- topic a topic name
+- messages messages to be published
+- config a producer config parameters
+</pre>
+<p>
+Returns: error or nil for success
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.ReadQueueNames">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=7794:7854#L242">ReadQueueNames</a>
+					<a class="permalink" href="index.html#KafkaConnection.ReadQueueNames">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) ReadQueueNames() ([]<a href="http://localhost:6060/pkg/builtin/#string">string</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.SetReferences">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=4287:4355#L108">SetReferences</a>
+					<a class="permalink" href="index.html#KafkaConnection.SetReferences">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) SetReferences(references <a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/refer/">cref</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/refer/#IReferences">IReferences</a>)</pre>
+				<p>
+Sets references to dependent components.
+</p>
+<pre>- references 	references to locate the component dependencies.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.Subscribe">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=9143:9268#L301">Subscribe</a>
+					<a class="permalink" href="index.html#KafkaConnection.Subscribe">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Subscribe(topic <a href="http://localhost:6060/pkg/builtin/#string">string</a>, groupId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, config *<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#Config">Config</a>, listener <a href="index.html#IKafkaMessageListener">IKafkaMessageListener</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Subscribe to a topic
+</p>
+<p>
+Parameters:
+</p>
+<pre>- topic a subject (topic) name
+- groupId (optional) a consumer group id
+- config consumer configuration parameters
+- listener a message listener
+</pre>
+<p>
+Returns: err or nil for success
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnection.Unsubscribe">func (*KafkaConnection) <a href="http://localhost:6060/src/connect/KafkaConnection.go?s=10636:10741#L352">Unsubscribe</a>
+					<a class="permalink" href="index.html#KafkaConnection.Unsubscribe">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnection">KafkaConnection</a>) Unsubscribe(topic <a href="http://localhost:6060/pkg/builtin/#string">string</a>, groupId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, listener <a href="index.html#IKafkaMessageListener">IKafkaMessageListener</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Unsubscribe from a previously subscribed topic topic
+</p>
+<p>
+Parameters:
+</p>
+<pre>- topic a topic name
+- groupId (optional) a consumer group id
+- listener a message listener
+</pre>
+<p>
+Returns: err or nil for success
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="KafkaConnectionResolver">type <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=1307:1501#L25">KafkaConnectionResolver</a>
+				<a class="permalink" href="index.html#KafkaConnectionResolver">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+KafkaConnectionResolver helper class that resolves Kafka connection and credential parameters,
+validates them and generates connection options.
+</p>
+<pre>Configuration parameters:
+</pre>
+<p>
+- connection(s):
+</p>
+<pre>- discovery_key:               (optional) a key to retrieve the connection from IDiscovery
+- host:                        host name or IP address
+- port:                        port number
+- uri:                         resource URI or connection string with all parameters in it
+</pre>
+<p>
+- credential(s):
+</p>
+<pre> - store_key:                   (optional) a key to retrieve the credentials from ICredentialStore
+ - username:                    user name
+ - password:                    user password
+
+References:
+</pre>
+<p>
+- *:discovery:*:*:1.0          (optional) IDiscovery services to resolve connections
+- *:credential-store:*:*:1.0   (optional) Credential stores to resolve credentials
+</p>
+
+			<pre>type KafkaConnectionResolver struct {
+    <span class="comment">// The connections resolver.</span>
+<span id="KafkaConnectionResolver.ConnectionResolver"></span>    ConnectionResolver *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/connect/">ccon</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/connect/#ConnectionResolver">ConnectionResolver</a>
+    <span class="comment">//The credentials resolver.</span>
+<span id="KafkaConnectionResolver.CredentialResolver"></span>    CredentialResolver *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/auth/">cauth</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/auth/#CredentialResolver">CredentialResolver</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewKafkaConnectionResolver">func <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=1505:1563#L32">NewKafkaConnectionResolver</a>
+					<a class="permalink" href="index.html#NewKafkaConnectionResolver">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewKafkaConnectionResolver() *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="KafkaConnectionResolver.Compose">func (*KafkaConnectionResolver) <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=5981:6147#L182">Compose</a>
+					<a class="permalink" href="index.html#KafkaConnectionResolver.Compose">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a>) Compose(correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>, connections []*<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/connect/">ccon</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/connect/#ConnectionParams">ConnectionParams</a>, credential *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/auth/">cauth</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-components-go/auth/#CredentialParams">CredentialParams</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/#ConfigParams">ConfigParams</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Compose method are composes Kafka connection options from connection and credential parameters.
+Parameters:
+</p>
+<pre>- correlationId  string  (optional) transaction id to trace execution through call chain.
+- connection  *ccon.ConnectionParams    connection parameters
+- credential  *cauth.CredentialParams   credential parameters
+</pre>
+<p>
+Returns: options *cconf.ConfigParams, err error
+resolved options or error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnectionResolver.Configure">func (*KafkaConnectionResolver) <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=1904:1975#L43">Configure</a>
+					<a class="permalink" href="index.html#KafkaConnectionResolver.Configure">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a>) Configure(config *<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/#ConfigParams">ConfigParams</a>)</pre>
+				<p>
+Configure are configures component by passing configuration parameters.
+Parameters:
+</p>
+<pre>- config   *cconf.ConfigParams
+</pre>
+<p>
+configuration parameters to be set.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnectionResolver.Resolve">func (*KafkaConnectionResolver) <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=4977:5069#L152">Resolve</a>
+					<a class="permalink" href="index.html#KafkaConnectionResolver.Resolve">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a>) Resolve(correlationId <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (*<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/">cconf</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/config/#ConfigParams">ConfigParams</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Resolves Kafka connection options from connection and credential parameters.
+Parameters:
+</p>
+<pre>- correlationId   string
+(optional) transaction id to trace execution through call chain.
+</pre>
+<p>
+Returns options *cconf.ConfigParams, err error
+receives resolved options or error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="KafkaConnectionResolver.SetReferences">func (*KafkaConnectionResolver) <a href="http://localhost:6060/src/connect/KafkaConnectionResolver.go?s=2234:2310#L52">SetReferences</a>
+					<a class="permalink" href="index.html#KafkaConnectionResolver.SetReferences">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (c *<a href="index.html#KafkaConnectionResolver">KafkaConnectionResolver</a>) SetReferences(references <a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/refer/">cref</a>.<a href="http://localhost:6060/pkg/github.com/pip-services3-go/pip-services3-commons-go/refer/#IReferences">IReferences</a>)</pre>
+				<p>
+SetReferences are sets references to dependent components.
+Parameters:
+</p>
+<pre> - references  cref.IReferences
+	references to locate the component dependencies.
+</pre>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="KafkaMessage">type <a href="http://localhost:6060/src/connect/KafkaMessage.go?s=70:169#L1">KafkaMessage</a>
+				<a class="permalink" href="index.html#KafkaMessage">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type KafkaMessage struct {
+<span id="KafkaMessage.Message"></span>    Message *<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#ConsumerMessage">ConsumerMessage</a>
+<span id="KafkaMessage.Session"></span>    Session <a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#ConsumerGroupSession">ConsumerGroupSession</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="KafkaSubscription">type <a href="http://localhost:6060/src/connect/KafkaSubscription.go?s=70:205#L1">KafkaSubscription</a>
+				<a class="permalink" href="index.html#KafkaSubscription">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type KafkaSubscription struct {
+<span id="KafkaSubscription.Topic"></span>    Topic    <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="KafkaSubscription.GroupId"></span>    GroupId  <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="KafkaSubscription.Listener"></span>    Listener <a href="index.html#IKafkaMessageListener">IKafkaMessageListener</a>
+<span id="KafkaSubscription.Handler"></span>    Handler  *<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/">kafka</a>.<a href="http://localhost:6060/pkg/github.com/Shopify/sarama/#ConsumerGroup">ConsumerGroup</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.16.15.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
